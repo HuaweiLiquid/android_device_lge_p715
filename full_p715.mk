@@ -1,11 +1,11 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright 2013 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-# http://www.apache.org/licenses/LICENSE-2.0
+#      http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,23 +14,25 @@
 # limitations under the License.
 #
 
-#
-# This file is the build configuration for a full Android
-# build for normandy hardware. This cleanly combines a set of
-# device-specific aspects (drivers) with a device-agnostic
-# product configuration (apps). Except for a few implementation
-# details, it only fundamentally contains two inherit-product
-# lines, full and normandy, hence its name.
-#
+# Sample: This is where we'd set a backup provider if we had one
+# $(call inherit-product, device/sample/products/backup_overlay.mk)
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit from xt1058 device
-$(call inherit-product, device/lge/p715/device_optimus.mk)
+# Inherit device configuration
+$(call inherit-product, device/lge/p715/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := p715
-PRODUCT_NAME := full_lge
-PRODUCT_MODEL := p715
-PRODUCT_MANUFACTURER := lg
+PRODUCT_NAME := full_p715
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LG-P715
+PRODUCT_MANUFACTURER := LGE
+PRODUCT_CHARACTERISTICS := phone
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=m4_open_eu \
+    BUILD_FINGERPRINT="lge/m4_open_eu/m4:4.1.2/JZO54K/E61020c-EUR-XX.1367460723:user/release-keys" \
+    PRIVATE_BUILD_DESC="m4_open_eu-user 4.1.2 JZO54K E61020c-EUR-XX.1367460723 release-keys"
+
+# Release name and versioning
+PRODUCT_RELEASE_NAME := OptimusL7
+PRODUCT_VERSION_DEVICE_SPECIFIC :=
