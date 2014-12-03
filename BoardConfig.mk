@@ -34,11 +34,11 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_KERNEL_CONFIG := Cyanogenmod_11_vee7_defconfig
 
 KERNEL_EXTERNAL_MODULES:
-       mkdir -p $(KERNEL_MODULES_OUT)/volans
-       rm -rf $(TARGET_OUT_INTERMEDIATES)/prebuilts
-       cp -a /lib/modules/volans/WCN1314_rf.ko $(TARGET_OUT_INTERMEDIATES)/
-       $(MAKE) -C $(TARGET_OUT_INTERMEDIATES)/prebuilts/WCN1314_rf KERNEL_OUT=$(KERNEL_OUT) ARCH="arm" CROSS_COMPILE="arm-eabi-" modules
-       $(MAKE) -C $(TARGET_OUT_INTERMEDIATES)/prebuilts/WCN1314_rf_ftm KERNEL_OUT=$(KERNEL_OUT) ARCH="arm" CROSS_COMPILE="arm-eabi-" modules
+	mkdir -p $(KERNEL_MODULES_OUT)/volans
+	rm -rf $(TARGET_OUT_INTERMEDIATES)/prebuilts
+	cp -a /lib/modules/volans/WCN1314_rf.ko $(TARGET_OUT_INTERMEDIATES)/
+	$(MAKE) -C $(TARGET_OUT_INTERMEDIATES)/prebuilts/WCN1314_rf KERNEL_OUT=$(KERNEL_OUT) ARCH="arm" CROSS_COMPILE="arm-eabi-" modules
+	$(MAKE) -C $(TARGET_OUT_INTERMEDIATES)/prebuilts/WCN1314_rf_ftm KERNEL_OUT=$(KERNEL_OUT) ARCH="arm" CROSS_COMPILE="arm-eabi-" modules
 	$(TARGET_OBJCOPY) --strip-unneeded $(TARGET_OUT_INTERMEDIATES)/prebuilts/WCN1314_rf/WCN1314_rf.ko $(TARGET_ROOT_OUT)/lib/modules/volans/WCN1314_rf.ko
 	$(TARGET_OBJCOPY) --strip-unneeded $(TARGET_OUT_INTERMEDIATES)/prebuilts/WCN1314_rf_ftm/WCN1314_rf_ftm.ko $(TARGET_ROOT_OUT)/lib/modules/volans/WCN1314_rf_ftm.ko
 TARGET_KERNEL_MODULES += PREBUILT_WLAN_MODULES
