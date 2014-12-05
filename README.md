@@ -25,7 +25,7 @@ Copy local_manifests.xml in .repo/local_manifests
          <project path="device/lge/msm7x27a-common" name="HuaweiLiquid/android_device_lge_msm7x27a-common" revision="cm-11.0" />
          <project path="device/lge/p715" name="HuaweiLiquid/android_device_lge_p715" revision="cm-11.0" />
          <project path="kernel/lge/p715" name="TeamHackLG/lge-kernel-lproj" revision="android-msm-3.4-kk" />
-         <project path="vendor/lge" name="TeamHackLG/proprietary_vendor_lge" revision="cm-11.0" remote="github"/>
+         <project path="vendor/lge" name="HuaweiLiquid/proprietary_vendor_lge" revision="cm-11.0" remote="github"/>
  
     </manifest>
 
