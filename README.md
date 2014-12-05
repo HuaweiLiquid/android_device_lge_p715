@@ -1,2 +1,4 @@
-LG Optimus L7II CyanogenMod 11
-by @weritos666
+android_device_lge_p715
+=======================
+
+LG Optimus L7 - p715
