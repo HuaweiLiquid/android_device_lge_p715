@@ -15,8 +15,7 @@ To initialize your local repository using the CyanogenMod trees, use a command l
 
 Copy local_manifests.xml in .repo/local_manifests
 
-
-<?xml version="1.0" encoding="UTF-8"?> 
+     <?xml version="1.0" encoding="UTF-8"?> 
          <remove-project name="CyanogenMod/android_frameworks_native" />
      
     	 <project path="hardware/qcom/display-legacy" name="legaCyMod/android_hardware_qcom_display-legacy" remote="github" revision="cm-11.0" />
@@ -28,7 +27,7 @@ Copy local_manifests.xml in .repo/local_manifests
          <project path="kernel/lge/p715" name="TeamHackLG/lge-kernel-lproj" revision="android-msm-3.4-kk" />
          <project path="vendor/lge" name="TeamHackLG/proprietary_vendor_lge" revision="cm-11.0" remote="github"/>
  
-</manifest>
+    </manifest>
 
 Then to sync up:
 
