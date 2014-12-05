@@ -30,6 +30,8 @@ Copy local_manifests.xml in .repo/local_manifests
 </manifest>
 ---------------
 
+     repo init -u git://github.com/CyanogenMod/android.git -b cm-11.0
+
 Then to sync up:
 
      repo sync
