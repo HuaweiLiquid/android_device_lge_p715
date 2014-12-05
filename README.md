@@ -14,7 +14,8 @@ To initialize your local repository using the CyanogenMod trees, use a command l
      repo init -u git://github.com/CyanogenMod/android.git -b cm-11.0
 
 Copy local_manifests.xml in .repo/local_manifests
----------------
+
+
 <?xml version="1.0" encoding="UTF-8"?> 
          <remove-project name="CyanogenMod/android_frameworks_native" />
      
@@ -28,9 +29,6 @@ Copy local_manifests.xml in .repo/local_manifests
          <project path="vendor/lge" name="TeamHackLG/proprietary_vendor_lge" revision="cm-11.0" remote="github"/>
  
 </manifest>
----------------
-
-     repo init -u git://github.com/CyanogenMod/android.git -b cm-11.0
 
 Then to sync up:
 
