@@ -16,6 +16,9 @@ To initialize your local repository using the CyanogenMod trees, use a command l
 Copy local_manifests.xml in .repo/local_manifests
 
 
+
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
