@@ -26,3 +26,12 @@ Then:
     . build/envsetup.sh
 
     brunch p715
+    
+Or all in one 
+    
+    repo sync && vendor/cm/get-prebuilts && . build/envsetup.sh
+    
+and than 
+
+    brunch p715
+    
